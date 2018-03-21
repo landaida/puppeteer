@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 (async function(){
-	let browser = await puppeteer.launch({dumpio: true, args:['--no-sandbox']})
+	let browser = await puppeteer.launch({dumpio: false, args:['--no-sandbox', '--disable-setuid-sandbox']})
 		console.log('after create new browser instance')
 		let page = await browser.newPage()
 		console.log('after create new page')
